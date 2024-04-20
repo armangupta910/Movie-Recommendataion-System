@@ -51,15 +51,12 @@ Mean Absolute Error (MAE): Measures the average absolute difference between the 
 
 ANN Model:
 Data Preparation:
-        
-        Encoded categorical variable 'genres' using LabelEncoder.
-        Scaled numerical feature 'rating' using MinMaxScaler.
-            
-        
-        Encoding Categorical Variables:
-         Utilized LabelEncoder to transform categorical 'genres' into numerical labels.
-        Scaling Numerical Features:
-         Applied MinMaxScaler to scale 'rating' feature to a range between 0 and 1.
+Encoded categorical variable 'genres' using LabelEncoder.
+Scaled numerical feature 'rating' using MinMaxScaler.
+Encoding Categorical Variables:
+Utilized LabelEncoder to transform categorical 'genres' into numerical labels.
+Scaling Numerical Features:
+Applied MinMaxScaler to scale 'rating' feature to a range between 0 and 1.
          
 Model Building:
       Constructed an ANN model for movie recommendation.
