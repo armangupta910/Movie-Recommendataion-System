@@ -35,7 +35,7 @@ We welcome contributions to improve the recommendation algorithms or any other a
 - **Sangini Garg**
 - **Anuj Chicholikar**
 - **Anushka Dadhich**
-- **Yogita**
+- **Yogita Mundankar**
 - **Abhay Kashyap**
 
 ---
