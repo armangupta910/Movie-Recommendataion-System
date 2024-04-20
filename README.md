@@ -27,7 +27,7 @@ The recommendation system utilizes the following models and features:
   - **Inputs:** User ID
   - **Outputs:** Uses Linear Regression to predict Movies using User ID.
 
-  KNN Model :
+  **KNN Model** :
       The initial phase of our project involved merging the ratings and movies datasets. During this process, it became apparent that a considerable number of movies had received zero ratings compared to other ratings. To address this imbalance, we applied a Log Transform to the count of each rating.The recommendation system was engineered to predict user preferences across a diverse array of movies. To achieve this, the refined dataset underwent transformation into a user-movie matrix. In this matrix:
     
     Rows corresponded to individual users.
@@ -38,18 +38,18 @@ The recommendation system utilizes the following models and features:
   Algorithm: Brute force, selected for its comprehensive evaluation of distances between all pairs of points in the dataset. Despite its computational intensity, this method ensures that no potential connections are overlooked, a critical consideration in recommendation contexts where accuracy is paramount.
 
 
-  SVR Model: SVR is a powerful machine learning technique that can be used for regression tasks, such as predicting movie ratings. In this implementation, an SVR model is initialized with specific parameters, including the kernel function (rbf), regularization parameter (C=1.0), and epsilon value (epsilon=0.2). The model is trained using the flattened training data, and predictions are made on the flattened test data.
+  **SVR Model**: SVR is a powerful machine learning technique that can be used for regression tasks, such as predicting movie ratings. In this implementation, an SVR model is initialized with specific parameters, including the kernel function (rbf), regularization parameter (C=1.0), and epsilon value (epsilon=0.2). The model is trained using the flattened training data, and predictions are made on the flattened test data.
 The performance of the SVR model is evaluated using three widely used metrics:
 Mean Squared Error (MSE): Measures the average squared difference between the predicted and actual ratings.
 Mean Absolute Error (MAE): Measures the average absolute difference between the predicted and actual ratings.
   R^2 Score: Indicates the proportion of the variance in the target variable that is explained by the model.
 
-  GMM Model:
+  **GMM Model**:
   Made predictions on the test set using the best model obtained from grid search.
  - Calculated the Root Mean Squared Error (RMSE) between the predicted ratings and actual ratings to evaluate model performance.
  -Confidence Score Calculation: The confidence scores represent the maximum probability assigned to each prediction by the model. For each prediction, the maximum probability across all possible rating classes is determined, indicating the model's confidence in its prediction.
 
-ANN Model:
+**ANN Model**:
 Data Preparation:
 Encoded categorical variable 'genres' using LabelEncoder.
 Scaled numerical feature 'rating' using MinMaxScaler.
