@@ -34,6 +34,9 @@ The recommendation system utilizes the following models and features:
     Columns represented movie titles.
     Entries in the matrix indicated the average rating given by a user to a specific movie.
 
+  Metric: Cosine similarity, chosen for its capacity to compare users regardless of the number of ratings they have submitted. This metric focuses on the angle between rating vectors rather than their magnitude, rendering it ideal for comparing similarity in sparse data.
+ Brute force, selected for its comprehensive evaluation of distances between all pairs of points in the dataset. Despite its computational intensity, this method ensures that no potential connections are overlooked, a critical consideration in recommendation contexts where accuracy is paramount.
+
 ## Contributing
 We welcome contributions to improve the recommendation algorithms or any other aspects of the system. Please follow the standard fork-branch-pull request workflow.
 
