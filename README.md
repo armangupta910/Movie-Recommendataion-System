@@ -51,7 +51,6 @@ Mean Absolute Error (MAE): Measures the average absolute difference between the 
 
 ANN Model:
 Model Building:
-        
       Constructed an ANN model for movie recommendation.
       Defined input layers for genre and rating.
       Utilized Embedding layer for genre input and Concatenate layer to merge inputs.
