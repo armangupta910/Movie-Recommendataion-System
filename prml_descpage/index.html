@@ -1,0 +1,386 @@
+<html xmlns="http://www.w3.org/1999/xhtml"><head><link href="https://fonts.cdnfonts.com/css/chalkduster" rel="stylesheet">
+    <style>
+        @import url('https://fonts.cdnfonts.com/css/chalkduster');
+    </style>
+    <!-- <script src="./sm/assets/teaser-data.js"></script> -->
+    
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Movie Recommender System</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="description" content="Project page for 'Movie Recommender System.'">
+        <link rel="icon" type="image/png" href="res/icon.png">
+        <!-- <link rel="icon" href="./pics/wis_logo.jpg"> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Composite Sketch+Text Queries for Retrieving Objects with Elusive Names and Complex Interactions</title>
+        <link href="style.css" rel="stylesheet" type="text/css">
+        <meta name="description" content="Project page for 'Movie Recommender System'">
+    
+    
+          <meta charset="utf-8">
+          <meta name="description" content="Movie Recommender System">
+           <meta name="keywords" content="Personalized Recommendations
+           K-Nearest Neighbors (KNN)
+           Artificial Neural Networks (ANN)
+           Support Vector Machines (SVM)
+           Gaussian Mixture Models (GMM)
+           Linear Regression
+           User Preferences
+           User Feedback
+           Content Recommendation">
+          <meta name="author" content="Soumen Kumar">
+          <title>Movie Recommender System</title>
+
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    </head>
+    
+    <body>
+        <p class="title">Movie Recommender System</p>
+        <div style="text-align: center; font-size: 15pt; margin-bottom: 15px">
+                <span>GroupID-19</a></span>
+        </div>
+        <p class="author">
+            <span class="author">Arman Gupta</a>&nbsp;<sup>1</sup></span>
+            <span class="author">Soumen Kumar</a>&nbsp;<sup>2</sup></span>
+            <span class="author">Sangini Garg</a>&nbsp;<sup>3</sup></span>
+            <span class="author">Anushka Dadhich</a>&nbsp;<sup>4</sup></span>
+            <span class="author">Yogita Mundankar</a>&nbsp;<sup>5</sup></span>
+            <span class="author">Abhay Kashyap</a>&nbsp;<sup>6</sup></span>
+            <span class="author">Anuj Chincholikar</a>&nbsp;<sup>7</sup></span>
+        </p>
+
+        <br>
+
+        <table width="999" border="0" align="center" class="menu" style="margin-bottom: 8px;">
+            <tbody>
+                <tr>
+                    <td align="center">| <a href="https://github.com/armangupta910/Movie-Recommendor-System/tree/main/dataSet">Dataset</a> | <a href="https://github.com/armangupta910/Movie-Recommendor-System/tree/main">GitHub</a> | <a href="https://drive.google.com/file/d/11RGwQ5BXFuh7kwRW2_cEo1Mito5s-59K/view?usp=sharing">Report</a> | <a href="https://drive.google.com/file/d/1Zg5G1_3zQ6LxQSRjnXDOFdgKOE4mgj7n/view?usp=drive_link">Slides</a> | <a href="./resources/CSTBIR-AAAI24Slides.pdf">Web Demo</a> | <a href="#" class="scrollToSection" data-target="#videoSection">Video</a>
+                        >
+                </tr>
+            </tbody>
+        </table>
+    
+        <div class="container">
+            <div style="text-align: justify;text-justify: inter-word;">
+            <p><span class="section"><b>Abstract</b></span> </p>
+            <p>With the ever-increasing amount of movie content available, providing personalized recommendations to users has become a crucial challenge. This project presents a comprehensive movie recommendation system that employs multiple machine learning models to cater to diverse user preferences and provide accurate recommendations. The system leverages the Movies Lens dataset containing 100k ratings to train and evaluate the models.</p>
+            <p>The recommendation system utilizes four main models: K-Nearest Neighbors (KNN), Artificial Neural Networks (ANN), Support Vector Machines (SVM), and Gaussian Mixture Models (GMM). The KNN model finds similar users based on movie preferences, while the ANN model predicts user preferences by capturing non-linear relationships between movie features and user feedback. The SVM model classifies users into different preference groups, enabling targeted recommendations, and the GMM clusters users based on their movie-watching patterns and preferences.</p>
+            <p>Additionally, a Linear Regression model is employed to predict movies based on user IDs, providing a complementary recommendation approach. By combining these diverse models and leveraging various input features such as user IDs, movie names, genres, ratings, and user feedback, the system offers a robust and personalized recommendation experience.</p>
+            <p>The proposed movie recommendation system demonstrates the power of machine learning techniques in addressing the challenges of content recommendation. By incorporating multiple models and leveraging different feature sets, the system aims to provide accurate and tailored recommendations, enhancing the overall user experience in the vast landscape of movie content.</p>
+            </div>
+            <div style="text-align: justify;text-justify: inter-word;">
+                <p><b>Keywords:</b></p> <ul> <li>Personalized Recommendations</li>  <li>K-Nearest Neighbors (KNN)</li> <li>Artificial Neural Networks (ANN)</li> <li>Support Vector Machines (SVM)</li> <li>Gaussian Mixture Models (GMM)</li> <li>Linear Regression</li> <li>User Preferences</li><li>User Feedback</li> <li>Content Recommendation</li> </ul>
+            </div>
+            <p class="section">&nbsp;</p>
+    
+            <p class="section">&nbsp;</p>
+            <p class="section"><b>Performance Metrics of Different Models</b></p>
+            <table id="metricsTable">
+                <thead>
+                    <tr>
+                        <th>Model</th>
+                        <th>Metrics</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>KNN</td>
+                        <td>RMSE: 2.912<br>MAE: 2.647<br>MAPE: 75.43%</td>
+                    </tr>
+                    <tr>
+                        <td>SVM</td>
+                        <td>MSE: 0.04<br>MAE: 0.20<br>R2 Score: 0.836</td>
+                    </tr>
+                    <tr>
+                        <td>GMM</td>
+                        <td>RMSE: 3.35<br>Best Parameters: covariance_type: full, n_components: 5<br>RMSE Percentage: 74.40%<br>Confidence Scores (in percentage): [91.13075468 97.4685502 97.03453028 ... 99.99366554 95.06600285 96.78346216]</td>
+                    </tr>
+                    <tr>
+                        <td>ANN</td>
+                        <td>Precision: 0.8<br>Recall: 1.0<br>MAE: 0.37</td>
+                    </tr>
+                    <tr>
+                        <td>Linear Regression</td>
+                        <td>RMSE: 1.05<br>MAE: 0.84<br>MAPE: 38.21%</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br>
+            <p class="section"><b>Outputs</b></p>
+            <div style="text-align: center">
+                <div style="display: flex; justify-content: space-between;">
+                    <div style="flex-basis: 22%;">
+                    </div>
+                    <div style="flex-basis: 45%; margin-bottom: 20px;">
+                        <div style="display: flex; justify-content: space-between;">
+                        </div>
+                    </div>
+                    <div style="flex-basis: 22%;">
+                    </div>
+                </div>
+                <!-- Stacking divs vertically and centering them -->
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <div style="flex-basis: 22%; border: 1px solid black;">
+                        <img src="res/knnm.png" alt="" width="100%" style="margin: auto">
+                        <p><b>MovieName as Input(KNN)</b></p>
+                    </div>
+                    <div style="flex-basis: 22%; border: 1px solid black;">
+                        <img src="res/knnu.png" alt="" width="100%" style="margin: auto">
+                        <img src="res/svm.png" alt="" width="48%" style="margin: auto">
+                        <p><b>UserID as Input(SVR and KNN)</b></p>
+                    </div>
+                    <div style="flex-basis: 22%; border: 1px solid black;">
+                        <img src="res/ann.png" alt="" width="100%" style="margin: auto">
+                        <p><b>Feedback-Based Output(ANN).</b></p>
+                    </div>
+                </div>
+            </div>
+            
+<p class="section">&nbsp;</p>
+
+    
+        <div id="videoSection">
+            <p class="section"><b>Video Demo of our Project:</b></p>
+            <center>
+                <iframe width="1000" height="600" src="https://www.youtube.com/embed/D73zJuKNLNc"></iframe>
+            </center>
+        </div>
+    </centre>
+    <br>
+            <div class="team">
+                <p class="section" id="team"><b>Team</b></p>
+                <div class="row justify-content-center">
+            
+                    <!-- Person 1 -->
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                        <div class="mainflip">
+                            <div class="card">
+                                <div class="card-body text-center card-no-padding">
+                                    <p><img class="img-fluid" src="res\ag.jpg" alt="ag"></p>
+                                    <h6 class="card-title">Arman <br> Gupta</h6>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/arman-gupta-67b91a172/?originalSubdomain=in">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://github.com/armangupta910/">
+                                                <i class="fa fa-github"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Person 2 -->
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                        <div class="mainflip">
+                            <div class="card">
+                                <div class="card-body text-center card-no-padding">
+                                    <p><img class="img-fluid" src="res\sk.jpg" alt="sk"></p>
+                                    <h6 class="card-title">Soumen <br> Kumar<br></h6>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/soumen-kumar-41726a286/">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://github.com/the-punisher-29">
+                                                <i class="fa fa-github"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Person 3 -->
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                        <div class="mainflip">
+                            <div class="card">
+                                <div class="card-body text-center card-no-padding">
+                                    <p><img class="img-fluid" src="res/sg.jpg" alt="sg"></p>
+                                    <h6 class="card-title">Sangini<br> Garg <br></h6>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/sangini-garg-17b0b7259/">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://github.com/sANGINI2004">
+                                                <i class="fa fa-github"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Person 4 -->
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                        <div class="mainflip">
+                            <div class="card">
+                                <div class="card-body text-center card-no-padding">
+                                    <p><img class="img-fluid" src="res\ad.jpg" alt="Ad"></p>
+                                    <h6 class="card-title">Anushka<br> Dadhich</h6>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/anushka-dadhich">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://github.com/nushhka">
+                                                <i class="fa fa-github"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Person 4 -->
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                        <div class="mainflip">
+                            <div class="card">
+                                <div class="card-body text-center card-no-padding">
+                                    <p><img class="img-fluid" src="res/ym.jpg" alt="ym"></p>
+                                    <h6 class="card-title">Yogita<br>Mundankar</h6>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/yogita-mundankar-a816261ba?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://github.com/b22cs068">
+                                                <i class="fa fa-github"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Person 4 -->
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                        <div class="mainflip">
+                            <div class="card">
+                                <div class="card-body text-center card-no-padding">
+                                    <p><img class="img-fluid" src="res\ak.jpg" alt="ak"></p>
+                                    <h6 class="card-title">Abhay<br> Kashyap</h6>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/abhay-kashyap-922a05256/">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://github.com/abhaykashyap31">
+                                                <i class="fa fa-github"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Person 4 -->
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-2">
+                        <div class="mainflip">
+                            <div class="card">
+                                <div class="card-body text-center card-no-padding">
+                                    <p><img class="img-fluid" src="res\ac.jpg" alt="Ac"></p>
+                                    <h6 class="card-title">Anuj<br> Chincholikar</h6>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://www.linkedin.com/in/anuj-chincholikar-1a6b17224/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app">
+                                                <i class="fa fa-linkedin"></i>
+                                            </a>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <a class="social-icon text-xs-center" target="_blank" href="https://github.com/chinanuj">
+                                                <i class="fa fa-github"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+         </div>
+            <p class="section">&nbsp;</p>
+    
+            <div class="ack"> <p class="section" id="ack"><b>Acknowledgements</b></p> <p>We would like to express our sincere gratitude to our course instructor,Anand Mishra, for their invaluable guidance, support, and feedback throughout this project. Their expertise and insights were instrumental in shaping our understanding of machine learning concepts and their practical applications.</p> <p>We would also like to extend our appreciation to the open-source community for their contributions in developing and maintaining the libraries and datasets that were crucial for the implementation
+                 of our movie recommender system. Specifically, we acknowledge the use of <a href="https://www.kaggle.com/datasets/aigamer/movie-lens-dataset"><b>Small Movie Lens Dataset</b></a> in our project.</p> <p>Furthermore, we would like to thank our peers and colleagues for their valuable discussions, feedback, and suggestions, which helped us improve our project and deepen our understanding of the subject matter.</p> </div>
+    
+    
+            <p class="section">&nbsp;</p>
+            <p class="section">&nbsp;</p>
+            <div class="contact">
+                <p class="section" id="related-paper"><b>Contact</b></p>
+                For questions, please feel free to contact any one of us through mail:<br>
+                <ul class="people-list">
+                    <li>Arman Gupta - <a href="mailto:b22cs014@iitj.ac.in">b22cs014@iitj.ac.in</a></li>
+                    <li>Soumen Kumar  - <a href="mailto:b22es006@iitj.ac.in">b22es006@iitj.ac.in</a></li>
+                    <li>Sangini Garg - <a href="mailto:b22cs045@iitj.ac.in">b22cs045@iitj.ac.in</a></li>
+                    <li>Anushka Dadhich - <a href="mailto:b22cs097@iitj.ac.in">b22cs097@iitj.ac.in</a></li>
+                    <li>Yogita Mundankar  - <a href="mailto:b22cs068@iitj.ac.in">b22cs068@iitj.ac.in</a></li>
+                    <li>Abhay Kashyap - <a href="mailto:b22cs001@iitj.ac.in">b22cs001@iitj.ac.in</a></li>
+                    <li>Anuj Chincholikar- <a href="mailto:b22es018@iitj.ac.in">b22es018@iitj.ac.in</a></li>
+                </ul>
+                 <center><b>To raise an issue,Please click here:- <a href="https://github.com/armangupta910/Movie-Recommendor-System/issues" target="_blank">GitHub</a></b></center>
+            </div>
+     <script>
+        function prompt_on(prompt_element) {
+            prompt_element.classList.add("caption-active");
+        }
+    
+        function prompt_off(prompt_element) {
+            prompt_element.classList.remove("caption-active");
+        }
+    
+        function toggle_prompt(active_prompt_id, inactive_prompt_ids, result_id) {
+            let active_prompt = document.getElementById(active_prompt_id);
+            prompt_on(active_prompt);
+            for (let i = 0; i < inactive_prompt_ids.length; i++) {
+                let inactive_prompt = document.getElementById(inactive_prompt_ids[i]);
+                prompt_off(inactive_prompt);
+            }
+    
+            let result = document.getElementById(result_id);
+            result.src = file_paths[active_prompt_id];
+        }
+     </script>
+    
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+     
+     <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var scrollToSectionLinks = document.querySelectorAll('.scrollToSection');
+            scrollToSectionLinks.forEach(function (link) {
+                link.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    var targetSelector = link.getAttribute('data-target');
+                    var targetSection = document.querySelector(targetSelector);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+        });
+    </script>
+    
+    
+    
+    </div></div></body></html>
