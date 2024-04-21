@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+</head>
+<body>
+    <h1>Recommendations</h1>
+    <h2>Similar Users:</h2>
+    <ul>
+        {% for user, distance in zip(similar_users, distances) %}
+        <li>User {{ user }} separated by distance of {{ distance }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Recommended Movies:</h2>
+    <ul>
+        {% for movie in recommended_movies %}
+        <li>{{ movie }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

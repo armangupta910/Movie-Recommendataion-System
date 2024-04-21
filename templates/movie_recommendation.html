@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<style>
+    /* CSS for the movie recommendation page */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("https://imgs.search.brave.com/1CdkMw9K2E91fT4HxTTDwv2y_5wn7l8NgEqVYcTHnsQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxOS8x/MS8wNy8yMC80OC9j/aW5lbWEtNDYwOTg3/N18xMjgwLmpwZw"); /* Add background image */
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column; /* Align items vertically */
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    }
+
+    .top-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+        z-index: 999; /* Ensure the bar is on top of other content */
+        padding: 0;
+        margin: 0;
+        height: 40px; /* Reduce height of the top bar */
+    }
+
+    .tab {
+        color: white;
+        padding: 0;
+        cursor: pointer;
+        opacity: 0.8;
+        font-size: 18px; /* Increase font size */
+        transition: opacity 0.3s ease;
+        border-radius: 0; /* Remove border radius */
+        border: none; /* Remove border */
+        flex: 1; /* Make the tabs equally dimensioned */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-right: 1px solid rgba(255, 255, 255, 0.3); /* Add right border */
+    }
+
+    .tab:last-child {
+        border-right: none; /* Remove right border for the last tab */
+    }
+
+    .tab:hover {
+        opacity: 1;
+        background-color: rgba(255, 165, 0, 0.5); /* Orange color with transparency */
+    }
+
+    h1 {
+        font-size: 60px; /* Increase heading size */
+        margin-bottom: 20px; /* Add margin */
+        text-align: center;
+    }
+
+    .search-bar {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar input[type="text"] {
+        width: 500px; /* Adjusted width */
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px; /* Add margin between input and buttons */
+    }
+
+    .search-bar button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 25px; /* Increase padding */
+        border: none;
+        border-radius: 8px; /* Increase border radius */
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Add animation */
+        margin: 5px;
+        font-style: italic;
+    }
+
+    .search-bar button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05); /* Add scale animation on hover */
+    }
+
+    .search-bar a {
+        color: white;
+        opacity: 0.8;
+        transition: opacity 0.3s ease;
+        margin-top: 10px; /* Add margin between link and buttons */
+        font-style: italic;
+    }
+
+    .search-bar a:hover {
+        opacity: 0.5;
+    }
+</style>
+<body>
+    <!-- Movie Recommendation Page -->
+    <div class="container">
+        <div class="top-bar">
+            <div class="tab">Genre</div>
+            <div class="tab">Rating</div>
+            <div class="tab">Feedback</div>
+            <div class="tab">Design</div>
+        </div>
+        <h1>Enter Movie Name</h1>
+        <div class="search-bar">
+            <input type="text" id="movie_name" placeholder="Enter Movie Name" required>
+            <button type="button"  id="get_movie_recommendations">Get Recommendations</button>
+            <button type="button"  id="reset_movie_results">Reset</button>
+        </div>
+        <div class="recommended-movies"></div>
+    </div>
+</body>
+</html>

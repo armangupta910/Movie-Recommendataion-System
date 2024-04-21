@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genre and Rating</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+
+<style>
+    /* CSS for the main page */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("https://imgs.search.brave.com/1CdkMw9K2E91fT4HxTTDwv2y_5wn7l8NgEqVYcTHnsQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9jZG4u/cGl4YWJheS5jb20v/cGhvdG8vMjAxOS8x/MS8wNy8yMC80OC9j/aW5lbWEtNDYwOTg3/N18xMjgwLmpwZw"); /* Add background image */
+        background-size: cover;
+        background-position: center;
+    }
+
+    .container {
+        position: relative;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column; /* Align items vertically */
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    }
+
+    h1 {
+        font-size: 60px; /* Increase heading size */
+        margin-bottom: 20px; /* Add margin */
+        text-align: center;
+    }
+
+    .search-bar {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-bar input[type="text"] {
+        width: 500px; /* Adjusted width */
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        margin-bottom: 10px; /* Add margin between input and buttons */
+    }
+
+    .search-bar button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 8px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Add animation */
+        margin: 5px;
+        font-style: italic;
+    }
+
+    .search-bar button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05); /* Add scale animation on hover */
+    }
+
+    /* Home button styles */
+    .home-button {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 40px;
+        height: 40px;
+        background-image: url("https://imgs.search.brave.com/-NYqbSoSThPT96hZEMYPFoF7PUCCj-mRJuDotjLWYvI/rs:fit:860:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA3LzA5LzEzLzcz/LzM2MF9GXzcwOTEz/NzM5NF9RdnBjNjZW/elh2N0FZSnM3eFJI/d3ZGYWFvUGdvS3dx/WS5qcGc");
+        background-size: cover;
+        background-position: center;
+        border: none;
+        cursor: pointer;
+        opacity: 0.8;
+    }
+
+    .home-button:hover {
+        opacity: 0.5;
+    }
+
+    /* Tab styles */
+    .tabs-container {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        background-color: rgba(0, 0, 0, 0.7);
+        padding: 10px 0;
+    }
+
+    .tab {
+        flex: 1;
+        text-align: center;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        padding: 10px 20px;
+        margin: 0 10px;
+        border-radius: 5px 5px 0 0;
+        cursor: pointer;
+    }
+
+    .tab:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    .tab.active {
+        background-color: #007bff;
+    }
+</style>
+<body>
+    <!-- Homepage -->
+    <div class="container">
+        <div class="tabs-container">
+            <div class="tab" id="user_tab">UserId</div>
+            <div class="tab active" id="genre_rating_tab">Genre and Rating</div>
+            <div class="tab" id="name_tab">Name</div>
+        </div>
+        <h1>Genre and Rating Page</h1>
+        <div class="search-bar">
+            <input type="text" id="genre_input" placeholder="Enter Genre">
+            <input type="text" id="rating_input" placeholder="Enter Rating">
+            <button type="button" class="btn" id="get_recommendations">Get Recommendations</button>
+            <button type="button" class="btn" id="reset_results">Reset</button>
+        </div>
+    </div>
+
+    <!-- Script tags -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Event handler for tab switching
+                $(".tab").click(function() {
+                    $(".tab").removeClass("active");
+                    $(this).addClass("active");
+
+                    // Redirect to the corresponding page based on the selected tab
+                    if ($(this).attr("id") === "user_tab") {
+                        window.location.href = "user_page.html";
+                    } else if ($(this).attr("id") === "genre_rating_tab") {
+                        window.location.href = "genre_rating.html"; // Updated link to genre and rating page
+                    } else if ($(this).attr("id") === "name_tab") {
+                        window.location.href = "name_page.html";
+                    }
+                });
+
+            // Clear input fields for Genre and Rating search
+            $("#reset_results").click(function() {
+                $("#genre_input").val("");
+                $("#rating_input").val("");
+            });
+
+            // Simulate getting recommendations with Genre and Rating (replace with actual AJAX call)
+            $("#get_recommendations").click(function() {
+                var genre = $("#genre_input").val();
+                var rating = $("#rating_input").val();
+                if (genre.trim() !== "" && rating.trim() !== "") {
+                    alert("Genre: " + genre + ", Rating: " + rating);
+                } else {
+                    alert("Please enter Genre and Rating.");
+                }
+            });
+        });
+    </script>
+</body>
+</html>
