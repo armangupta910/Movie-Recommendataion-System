@@ -40,9 +40,12 @@ The recommendation system utilizes the following models and features:
 
   **SVR Model**: SVR is a powerful machine learning technique that can be used for regression tasks, such as predicting movie ratings. In this implementation, an SVR model is initialized with specific parameters, including the kernel function (rbf), regularization parameter (C=1.0), and epsilon value (epsilon=0.2). The model is trained using the flattened training data, and predictions are made on the flattened test data.
 The performance of the SVR model is evaluated using three widely used metrics:
+
 Mean Squared Error (MSE): Measures the average squared difference between the predicted and actual ratings.
+
 Mean Absolute Error (MAE): Measures the average absolute difference between the predicted and actual ratings.
-  R^2 Score: Indicates the proportion of the variance in the target variable that is explained by the model.
+
+R^2 Score: Indicates the proportion of the variance in the target variable that is explained by the model.
 
   **GMM Model**:
   Made predictions on the test set using the best model obtained from grid search.
