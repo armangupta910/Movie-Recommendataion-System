@@ -22,24 +22,24 @@ The recommendation system utilizes the following models and features:
 
 - **Gaussian Mixture Model (GMM):**
   - **Inputs:** User ID
-  - **Outputs:** Clusters users into groups based on their movie watching patterns and preferences.
+  - **Outputs:** Clusters users into groups based on their movie-watching patterns and preferences.
 - **Linear Regression Model:**
   - **Inputs:** User ID
   - **Outputs:** Uses Linear Regression to predict Movies using User ID.
 
   **KNN Model** :
-      The initial phase of our project involved merging the ratings and movies datasets. During this process, it became apparent that a considerable number of movies had received zero ratings compared to other ratings. To address this imbalance, we applied a Log Transform to the count of each rating.The recommendation system was engineered to predict user preferences across a diverse array of movies. To achieve this, the refined dataset underwent transformation into a user-movie matrix. In this matrix:
+      The initial phase of our project involved merging the ratings and movie datasets. During this process, it became apparent that many movies had received zero ratings compared to others. To address this imbalance, we applied a Log Transform to the count of each rating. The recommendation system was engineered to predict user preferences across various movies. To achieve this, the refined dataset underwent a transformation into a user-movie matrix. In this matrix:
     
     Rows corresponded to individual users.
     Columns represented movie titles.
-    Entries in the matrix indicated the average rating given by a user to a specific movie.
+    Entries in the matrix indicated the average rating a user gives to a specific movie.
 
   Metric: Cosine similarity, chosen for its capacity to compare users regardless of the number of ratings they have submitted. This metric focuses on the angle between rating vectors rather than their magnitude, rendering it ideal for comparing similarity in sparse data.
   Algorithm: Brute force, selected for its comprehensive evaluation of distances between all pairs of points in the dataset. Despite its computational intensity, this method ensures that no potential connections are overlooked, a critical consideration in recommendation 
   contexts where accuracy is paramount.
 
 
-  **SVR Model**: SVR is a powerful machine learning technique that can be used for regression tasks, such as predicting movie ratings. In this implementation, an SVR model is initialized with specific parameters, including the kernel function (rbf), regularization 
+  **SVR Model**: SVR is a powerful machine-learning technique that can be used for regression tasks, such as predicting movie ratings. In this implementation, an SVR model is initialized with specific parameters, including the kernel function (rbf), regularization 
   parameter (C=1.0), and epsilon value (epsilon=0.2). The model is trained using the flattened training data, and predictions are made on the flattened test data.
   The performance of the SVR model is evaluated using three widely used metrics:
 
@@ -51,36 +51,36 @@ The recommendation system utilizes the following models and features:
 
   **GMM Model**:
   Made predictions on the test set using the best model obtained from grid search.
-  - Calculated the Root Mean Squared Error (RMSE) between the predicted ratings and actual ratings to evaluate model performance.
-  - Confidence Score Calculation: The confidence scores represent the maximum probability assigned to each prediction by the model. For each prediction, the maximum probability across all possible rating classes is determined, indicating the model's confidence in its 
+  - Calculated the Root Mean Squared Error (RMSE) between predicted and actual ratings to evaluate model performance.
+  - Confidence Score Calculation: The confidence scores represent the maximum probability assigned to each prediction by the model. The maximum probability across all possible rating classes is determined for each prediction, indicating the model's confidence in its 
   prediction.
 
-**ANN Model**:
-Data Preparation:
-Encoded categorical variable 'genres' using LabelEncoder.
-Scaled numerical feature 'rating' using MinMaxScaler.
-Encoding Categorical Variables:
-Utilized LabelEncoder to transform categorical 'genres' into numerical labels.
-Scaling Numerical Features:
-Applied MinMaxScaler to scale 'rating' feature to a range between 0 and 1.
+  **ANN Model**:
+  Data Preparation:
+  Encoded categorical variable 'genres' using LabelEncoder.
+  Scaled numerical feature 'rating' using MinMaxScaler.
+  Encoding Categorical Variables:
+  Utilized LabelEncoder to transform categorical 'genres' into numerical labels.
+  Scaling Numerical Features:
+  Applied MinMaxScaler to scale the 'rating' feature to a range between 0 and 1.
          
-Model Building:
+  Model Building:
       Constructed an ANN model for movie recommendation.
       Defined input layers for genre and rating.
       Utilized Embedding layer for genre input and Concatenate layer to merge inputs.
       Comprised Dense layers for learning complex patterns.
       Compiled the model using mean squared error loss and Adam optimizer.
 
-## Contributing
-We welcome contributions to improve the recommendation algorithms or any other aspects of the system. Please follow the standard fork-branch-pull request workflow.
+  ## Contributing
+  We welcome contributions to improve the recommendation algorithms or any other aspects of the system. Please follow the standard fork-branch-pull request workflow.
 
-## Authors
-- **Arman Gupta**
-- **Soumen Kumar**
-- **Sangini Garg**
-- **Anuj Chicholikar**
-- **Anushka Dadhich**
-- **Yogita Mundankar**
-- **Abhay Kashyap**
+  ## Authors
+  - **Arman Gupta**
+  - **Soumen Kumar**
+  - **Sangini Garg**
+  - **Anuj Chicholikar**
+  - **Anushka Dadhich**
+  - **Yogita Mundankar**
+  - **Abhay Kashyap**
 
 ---
