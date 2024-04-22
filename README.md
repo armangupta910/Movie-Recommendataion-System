@@ -80,7 +80,7 @@ The recommendation system utilizes the following models and features:
   ## Link to video presentation
   https://youtu.be/D73zJuKNLNc
 
-  ## Link to presentation
+  ## Link to presentation slides
   https://drive.google.com/file/d/1Zg5G1_3zQ6LxQSRjnXDOFdgKOE4mgj7n/view
 
   ## Authors
