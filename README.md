@@ -74,7 +74,7 @@ The recommendation system utilizes the following models and features:
   ## Contributing
   We welcome contributions to improve the recommendation algorithms or any other aspects of the system. Please follow the standard fork-branch-pull request workflow.
 
-  ## Link to Report
+## Link to Report
  https://drive.google.com/file/d/11RGwQ5BXFuh7kwRW2_cEo1Mito5s-59K/view
 
   ## Link to video presentation
