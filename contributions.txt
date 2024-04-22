@@ -1,6 +1,0 @@
-KNN :- Arman
-Linear Regression :- Anushka - (Input: user_id, output: recommended movies) (accuracy = 0.0033)
-SVD :- Github
-ANN :- Abhay
-GMM :- Sangini
-SVR :- Soumen
