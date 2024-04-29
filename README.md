@@ -87,7 +87,7 @@ The recommendation system utilizes the following models and features:
   - **Arman Gupta**
   - **Soumen Kumar**
   - **Sangini Garg**
-  - **Anuj Chicholikar**
+  - **Anuj Chincholikar**
   - **Anushka Dadhich**
   - **Yogita Mundankar**
   - **Abhay Kashyap**
